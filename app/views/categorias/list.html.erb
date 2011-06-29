@@ -1,0 +1,13 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<h1> Lista de categorias </h1>
+<ul id="cat_list">
+  <% @categoria.each do |c| %>
+  <li><%= link_to c.titulo, :action => 'show', :id => c.id %>
+  <%= "(#{c.productos.count})" -%>
+  </li>
+  <% end %>
+</ul>

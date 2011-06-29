@@ -1,0 +1,1479 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (125.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (188.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePaginas (20110628200030)
+  [4;35;1mSQL (63.0ms)[0m   [0mCREATE TABLE `paginas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `titulo` varchar(255), `contenido` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110628200030')[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `paginas`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mdescribe `paginas`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `paginas`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PaginasController#index (for 127.0.0.1 at 2011-06-28 16:05:02) [GET]
+  [4;36;1mPagina Load (16.0ms)[0m   [0;1mSELECT * FROM `paginas` [0m
+Rendering paginas/index
+Completed in 218ms (View: 187, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PaginasController#new (for 127.0.0.1 at 2011-06-28 16:05:14) [GET]
+  [4;35;1mPagina Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `paginas`[0m
+Rendering paginas/new
+Rendered paginas/_form (2063.0ms)
+Completed in 2110ms (View: 2078, DB: 0) | 200 OK [http://localhost/paginas/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PaginasController#create (for 127.0.0.1 at 2011-06-28 16:05:57) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"qIADd4umN6B02gAB6uplp3gQbEcgYrPRa+FTa0bvdoM=", "pagina"=>{"contenido"=>"Acerca de nosotros dicen que somos asi no se por que pero lo somos mucho mas que eso :D", "titulo"=>"Acerca de"}}
+  [4;36;1mPagina Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `paginas`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPagina Create (0.0ms)[0m   [0;1mINSERT INTO `paginas` (`updated_at`, `titulo`, `contenido`, `created_at`) VALUES('2011-06-28 20:05:57', 'Acerca de', 'Acerca de nosotros dicen que somos asi no se por que pero lo somos mucho mas que eso :D', '2011-06-28 20:05:57')[0m
+  [4;35;1mSQL (63.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/paginas/1
+Completed in 94ms (DB: 78) | 302 Found [http://localhost/paginas]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PaginasController#show (for 127.0.0.1 at 2011-06-28 16:05:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPagina Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `paginas`[0m
+  [4;35;1mPagina Load (0.0ms)[0m   [0mSELECT * FROM `paginas` WHERE (`paginas`.`id` = 1) [0m
+Rendering paginas/show
+Completed in 63ms (View: 47, DB: 16) | 200 OK [http://localhost/paginas/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PaginasController#index (for 127.0.0.1 at 2011-06-28 16:06:04) [GET]
+  [4;36;1mPagina Load (0.0ms)[0m   [0;1mSELECT * FROM `paginas` [0m
+Rendering paginas/index
+  [4;35;1mPagina Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `paginas`[0m
+Completed in 31ms (View: 0, DB: 15) | 200 OK [http://localhost/paginas]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PaginasController#new (for 127.0.0.1 at 2011-06-28 16:06:34) [GET]
+  [4;36;1mPagina Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `paginas`[0m
+Rendering paginas/new
+Rendered paginas/_form (16.0ms)
+Completed in 31ms (View: 16, DB: 15) | 200 OK [http://localhost/paginas/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PaginasController#new (for 127.0.0.1 at 2011-06-28 16:06:38) [GET]
+  [4;35;1mPagina Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `paginas`[0m
+Rendering paginas/new
+Rendered paginas/_form (0.0ms)
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/paginas/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PaginasController#create (for 127.0.0.1 at 2011-06-28 16:07:05) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"qIADd4umN6B02gAB6uplp3gQbEcgYrPRa+FTa0bvdoM=", "pagina"=>{"contenido"=>"Contactenos cuando quiera y de la forma que sea jajaja", "titulo"=>"Contatos"}}
+  [4;36;1mPagina Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `paginas`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPagina Create (0.0ms)[0m   [0;1mINSERT INTO `paginas` (`updated_at`, `titulo`, `contenido`, `created_at`) VALUES('2011-06-28 20:07:05', 'Contatos', 'Contactenos cuando quiera y de la forma que sea jajaja', '2011-06-28 20:07:05')[0m
+  [4;35;1mSQL (46.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/paginas/2
+Completed in 93ms (DB: 62) | 302 Found [http://localhost/paginas]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PaginasController#show (for 127.0.0.1 at 2011-06-28 16:07:05) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPagina Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `paginas`[0m
+  [4;35;1mPagina Load (0.0ms)[0m   [0mSELECT * FROM `paginas` WHERE (`paginas`.`id` = 2) [0m
+Rendering paginas/show
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/paginas/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PaginasController#index (for 127.0.0.1 at 2011-06-28 16:07:07) [GET]
+  [4;36;1mPagina Load (0.0ms)[0m   [0;1mSELECT * FROM `paginas` [0m
+Rendering paginas/index
+  [4;35;1mPagina Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `paginas`[0m
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/paginas]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePaginas (20110628200030)
+Migrating to CreateCategorias (20110629153729)
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE `categorias` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `titulo` varchar(100) NOT NULL, `contenido` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110629153729')[0m
+Migrating to CreateProductos (20110629155303)
+  [4;36;1mSQL (63.0ms)[0m   [0;1mCREATE TABLE `productos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `categoria_id` int(11), `titulo` varchar(100) NOT NULL, `contenido` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110629155303')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mdescribe `categorias`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `categorias`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `productos`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW KEYS FROM `productos`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (156.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePaginas (20110628200030)
+  [4;35;1mSQL (93.0ms)[0m   [0mCREATE TABLE `paginas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `titulo` varchar(100) NOT NULL, `contenido` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110628200030')[0m
+Migrating to CreateCategorias (20110629153729)
+  [4;35;1mSQL (78.0ms)[0m   [0mCREATE TABLE `categorias` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `titulo` varchar(100) NOT NULL, `contenido` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110629153729')[0m
+Migrating to CreateProductos (20110629155303)
+  [4;35;1mSQL (78.0ms)[0m   [0mCREATE TABLE `productos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `categoria_id` int(11), `titulo` varchar(100) NOT NULL, `contenido` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110629155303')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `categorias`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `categorias`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSHOW FIELDS FROM `paginas`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `paginas`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `paginas`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `productos`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW KEYS FROM `productos`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PaginasController#index (for 127.0.0.1 at 2011-06-29 12:10:25) [GET]
+  [4;36;1mPagina Load (0.0ms)[0m   [0;1mSELECT * FROM `paginas` [0m
+Rendering paginas/index
+Completed in 250ms (View: 234, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PaginasController#index (for 127.0.0.1 at 2011-06-29 12:10:53) [GET]
+  [4;35;1mPagina Load (0.0ms)[0m   [0mSELECT * FROM `paginas` [0m
+Rendering template within layouts/aplicacion
+Rendering paginas/index
+Completed in 2297ms (View: 2281, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PaginasController#new (for 127.0.0.1 at 2011-06-29 12:10:58) [GET]
+  [4;36;1mPagina Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `paginas`[0m
+Rendering template within layouts/aplicacion
+Rendering paginas/new
+Rendered paginas/_form (15.0ms)
+Completed in 156ms (View: 140, DB: 15) | 200 OK [http://localhost/paginas/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2011-06-29 12:11:15) [GET]
+  [4;35;1mProducto Load (0.0ms)[0m   [0mSELECT * FROM `productos` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/index
+Completed in 203ms (View: 188, DB: 16) | 200 OK [http://localhost/productos]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2011-06-29 12:11:19) [GET]
+  [4;36;1mProducto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`titulo` IS NULL) [0m
+Rendering template within layouts/aplicacion
+Rendering productos/new
+Rendered productos/_form (16.0ms)
+Completed in 94ms (View: 47, DB: 15) | 200 OK [http://localhost/productos/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2011-06-29 12:11:29) [GET]
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering categorias/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/categorias]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#new (for 127.0.0.1 at 2011-06-29 12:11:31) [GET]
+  [4;36;1mCategoria Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+Rendering template within layouts/aplicacion
+Rendering categorias/new
+Rendered categorias/_form (16.0ms)
+Completed in 187ms (View: 156, DB: 16) | 200 OK [http://localhost/categorias/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#create (for 127.0.0.1 at 2011-06-29 12:11:54) [POST]
+  Parameters: {"categoria"=>{"contenido"=>"Categoria Principal", "titulo"=>"Principal"}, "commit"=>"Save changes", "authenticity_token"=>"nuDjHf+t8cqtSRuDtyCRQcFAK6qQH1j/AH2mgK7riEs="}
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategoria Create (0.0ms)[0m   [0mINSERT INTO `categorias` (`updated_at`, `titulo`, `contenido`, `created_at`) VALUES('2011-06-29 16:11:54', 'Principal', 'Categoria Principal', '2011-06-29 16:11:54')[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/categorias/1
+Completed in 203ms (DB: 31) | 302 Found [http://localhost/categorias]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2011-06-29 12:11:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategoria Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (16.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+Rendering template within layouts/aplicacion
+Rendering categorias/show
+Completed in 78ms (View: 31, DB: 31) | 200 OK [http://localhost/categorias/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2011-06-29 12:11:59) [GET]
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering categorias/index
+  [4;36;1mCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/categorias]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2011-06-29 12:12:19) [GET]
+  [4;35;1mProducto Load (0.0ms)[0m   [0mSELECT * FROM `productos` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/index
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://localhost/productos]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2011-06-29 12:12:21) [GET]
+  [4;36;1mProducto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`titulo` IS NULL) [0m
+Rendering template within layouts/aplicacion
+Rendering productos/new
+Rendered productos/_form (0.0ms)
+Completed in 78ms (View: 16, DB: 16) | 200 OK [http://localhost/productos/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2011-06-29 12:12:25) [GET]
+  [4;35;1mProducto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+  [4;36;1mCategoria Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`titulo` IS NULL) [0m
+Rendering template within layouts/aplicacion
+Rendering productos/new
+Rendered productos/_form (0.0ms)
+Completed in 62ms (View: 16, DB: 30) | 200 OK [http://localhost/productos/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2011-06-29 12:12:25) [GET]
+  [4;36;1mProducto Columns (32.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`titulo` IS NULL) [0m
+Rendering template within layouts/aplicacion
+Rendering productos/new
+Rendered productos/_form (16.0ms)
+Completed in 94ms (View: 16, DB: 32) | 200 OK [http://localhost/productos/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2011-06-29 12:13:00) [GET]
+  [4;35;1mProducto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+
+NoMethodError (undefined method `find_all' for #<Class:0x46d94cc>):
+  app/controllers/productos_controller.rb:13:in `new'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (328.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2011-06-29 12:15:39) [GET]
+  [4;36;1mProducto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mCategoria Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+
+NoMethodError (undefined method `find_all' for #<Class:0x487ef0c>):
+  app/controllers/productos_controller.rb:13:in `new'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2011-06-29 12:15:49) [GET]
+
+SyntaxError (C:/Documents and Settings/Administrador.DESKTOP/Mis documentos/rails/producto/app/controllers/productos_controller.rb:13: syntax error, unexpected '|', expecting tCOLON2 or '[' or '.'
+    @categoria = Categoria.find_all { |3|  }
+                                         ^
+C:/Documents and Settings/Administrador.DESKTOP/Mis documentos/rails/producto/app/controllers/productos_controller.rb:48: syntax error, unexpected $end, expecting kEND):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (406.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2011-06-29 12:16:04) [GET]
+
+SyntaxError (C:/Documents and Settings/Administrador.DESKTOP/Mis documentos/rails/producto/app/controllers/productos_controller.rb:13: syntax error, unexpected '|', expecting tCOLON2 or '[' or '.'
+    @categoria = Categoria.find_all { |1|  }
+                                         ^
+C:/Documents and Settings/Administrador.DESKTOP/Mis documentos/rails/producto/app/controllers/productos_controller.rb:48: syntax error, unexpected $end, expecting kEND):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2011-06-29 12:16:05) [GET]
+
+SyntaxError (C:/Documents and Settings/Administrador.DESKTOP/Mis documentos/rails/producto/app/controllers/productos_controller.rb:13: syntax error, unexpected '|', expecting tCOLON2 or '[' or '.'
+    @categoria = Categoria.find_all { |1|  }
+                                         ^
+C:/Documents and Settings/Administrador.DESKTOP/Mis documentos/rails/producto/app/controllers/productos_controller.rb:48: syntax error, unexpected $end, expecting kEND):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2011-06-29 12:16:17) [GET]
+  [4;35;1mProducto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+
+NoMethodError (undefined method `find_all' for #<Class:0x477073c>):
+  app/controllers/productos_controller.rb:13:in `new'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (453.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2011-06-29 12:20:25) [GET]
+  [4;36;1mProducto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mCategoria Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+
+NoMethodError (undefined method `find_all' for #<Class:0x4887d64>):
+  app/controllers/productos_controller.rb:13:in `new'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2011-06-29 12:20:26) [GET]
+  [4;35;1mProducto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+
+NoMethodError (undefined method `find_all' for #<Class:0x47a42e4>):
+  app/controllers/productos_controller.rb:13:in `new'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (406.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2011-06-29 12:21:01) [GET]
+  [4;36;1mProducto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`titulo` IS NULL) [0m
+Rendering template within layouts/aplicacion
+Rendering productos/new
+Rendered productos/_form (0.0ms)
+Completed in 78ms (View: 16, DB: 15) | 200 OK [http://localhost/productos/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2011-06-29 12:22:52) [GET]
+  [4;35;1mProducto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/new
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+Rendered productos/_form (32.0ms)
+Completed in 63ms (View: 32, DB: 15) | 200 OK [http://localhost/productos/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2011-06-29 12:26:12) [GET]
+  [4;36;1mProducto Load (0.0ms)[0m   [0;1mSELECT * FROM `productos` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/index
+Completed in 15ms (View: 0, DB: 16) | 200 OK [http://localhost/productos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2011-06-29 12:26:15) [GET]
+  [4;35;1mProducto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/new
+  [4;35;1mCategoria Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+Rendered productos/_form (16.0ms)
+Completed in 62ms (View: 0, DB: 32) | 200 OK [http://localhost/productos/new]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#create (for 127.0.0.1 at 2011-06-29 12:26:40) [POST]
+  Parameters: {"producto"=>{"categoria_id"=>"1", "contenido"=>"Cosas para la vida si lo quiere lo tiene :D", "titulo"=>"Cosas"}, "commit"=>"Save changes", "authenticity_token"=>"nuDjHf+t8cqtSRuDtyCRQcFAK6qQH1j/AH2mgK7riEs="}
+  [4;36;1mProducto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mProducto Create (0.0ms)[0m   [0;1mINSERT INTO `productos` (`categoria_id`, `updated_at`, `titulo`, `contenido`, `created_at`) VALUES(1, '2011-06-29 16:26:40', 'Cosas', 'Cosas para la vida si lo quiere lo tiene :D', '2011-06-29 16:26:40')[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/productos/1
+Completed in 78ms (DB: 63) | 302 Found [http://localhost/productos]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2011-06-29 12:26:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProducto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+  [4;35;1mProducto Load (0.0ms)[0m   [0mSELECT * FROM `productos` WHERE (`productos`.`id` = 1) [0m
+Rendering template within layouts/aplicacion
+Rendering productos/show
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/productos/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2011-06-29 12:27:18) [GET]
+  [4;36;1mProducto Load (0.0ms)[0m   [0;1mSELECT * FROM `productos` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/index
+  [4;35;1mProducto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/productos]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2011-06-29 12:31:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProducto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+  [4;35;1mProducto Load (16.0ms)[0m   [0mSELECT * FROM `productos` WHERE (`productos`.`id` = 1) [0m
+  [4;36;1mCategoria Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+Rendering template within layouts/aplicacion
+Rendering productos/show
+
+ActionView::TemplateError (wrong number of arguments (2 for 1)) on line #5 of app/views/productos/show.html.erb:
+2: 
+3: <p>
+4:   <strong>Categoria:</strong>
+5:   <%=h @producto.categoria_id,@categoria.titulo %>
+6: </p>
+7: <p>
+8:   <strong>Titulo:</strong>
+
+    app/views/productos/show.html.erb:5:in `h'
+    app/views/productos/show.html.erb:5
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2011-06-29 12:32:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProducto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+  [4;35;1mProducto Load (0.0ms)[0m   [0mSELECT * FROM `productos` WHERE (`productos`.`id` = 1) [0m
+  [4;36;1mCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+  [4;35;1mCategoria Load (16.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+Rendering template within layouts/aplicacion
+Rendering productos/show
+Completed in 203ms (View: 140, DB: 16) | 200 OK [http://localhost/productos/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2011-06-29 12:32:39) [GET]
+  [4;36;1mProducto Load (0.0ms)[0m   [0;1mSELECT * FROM `productos` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/index
+  [4;35;1mProducto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/productos]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2011-06-29 12:32:57) [GET]
+  [4;36;1mProducto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/new
+  [4;36;1mCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+Rendered productos/_form (31.0ms)
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://localhost/productos/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#create (for 127.0.0.1 at 2011-06-29 12:33:16) [POST]
+  Parameters: {"producto"=>{"categoria_id"=>"1", "contenido"=>"otras cosas de la vida para que ver si no ver", "titulo"=>"otra cosa"}, "commit"=>"Save changes", "authenticity_token"=>"nuDjHf+t8cqtSRuDtyCRQcFAK6qQH1j/AH2mgK7riEs="}
+  [4;35;1mProducto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProducto Create (0.0ms)[0m   [0mINSERT INTO `productos` (`categoria_id`, `updated_at`, `titulo`, `contenido`, `created_at`) VALUES(1, '2011-06-29 16:33:16', 'otra cosa', 'otras cosas de la vida para que ver si no ver', '2011-06-29 16:33:16')[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/productos/2
+Completed in 94ms (DB: 78) | 302 Found [http://localhost/productos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2011-06-29 12:33:16) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProducto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+  [4;36;1mProducto Load (0.0ms)[0m   [0;1mSELECT * FROM `productos` WHERE (`productos`.`id` = 2) [0m
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (16.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 2) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Categoria with ID=2):
+  app/controllers/productos_controller.rb:10:in `show'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2011-06-29 12:33:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProducto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+  [4;36;1mProducto Load (0.0ms)[0m   [0;1mSELECT * FROM `productos` WHERE (`productos`.`id` = 2) [0m
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 2) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Categoria with ID=2):
+  app/controllers/productos_controller.rb:10:in `show'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (360.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2011-06-29 12:34:55) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProducto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+  [4;36;1mProducto Load (0.0ms)[0m   [0;1mSELECT * FROM `productos` WHERE (`productos`.`id` = 2) [0m
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/show
+Completed in 79ms (View: 32, DB: 16) | 200 OK [http://localhost/productos/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2011-06-29 12:35:38) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProducto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+  [4;35;1mProducto Load (0.0ms)[0m   [0mSELECT * FROM `productos` WHERE (`productos`.`id` = 2) [0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/show
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+
+ActionView::TemplateError (undefined method `titulo' for #<Array:0x47fa414>) on line #5 of app/views/productos/show.html.erb:
+2: 
+3: <p>
+4:   <strong>Categoria:</strong>
+5:   <%=h @categoria.titulo %>
+6: </p>
+7: <p>
+8:   <strong>Titulo:</strong>
+
+    app/views/productos/show.html.erb:5
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (360.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2011-06-29 12:36:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProducto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+  [4;35;1mProducto Load (0.0ms)[0m   [0mSELECT * FROM `productos` WHERE (`productos`.`id` = 2) [0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/show
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/productos/2]
+  [4;35;1mSQL (15.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#edit (for 127.0.0.1 at 2011-06-29 12:36:20) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProducto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+  [4;36;1mProducto Load (0.0ms)[0m   [0;1mSELECT * FROM `productos` WHERE (`productos`.`id` = 2) [0m
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/edit
+  [4;36;1mCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+Rendered productos/_form (15.0ms)
+Completed in 78ms (View: 47, DB: 15) | 200 OK [http://localhost/productos/2/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2011-06-29 12:36:25) [GET]
+  [4;35;1mProducto Load (16.0ms)[0m   [0mSELECT * FROM `productos` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/index
+  [4;36;1mProducto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+Completed in 62ms (View: 15, DB: 32) | 200 OK [http://localhost/productos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2011-06-29 12:36:40) [GET]
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering categorias/index
+  [4;36;1mCategoria Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+Completed in 47ms (View: 16, DB: 15) | 200 OK [http://localhost/categorias]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#new (for 127.0.0.1 at 2011-06-29 12:36:42) [GET]
+  [4;35;1mCategoria Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+Rendering template within layouts/aplicacion
+Rendering categorias/new
+Rendered categorias/_form (15.0ms)
+Completed in 46ms (View: 15, DB: 16) | 200 OK [http://localhost/categorias/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#create (for 127.0.0.1 at 2011-06-29 12:37:03) [POST]
+  Parameters: {"categoria"=>{"contenido"=>"Categoria secundaria ", "titulo"=>"Secundario"}, "commit"=>"Save changes", "authenticity_token"=>"nuDjHf+t8cqtSRuDtyCRQcFAK6qQH1j/AH2mgK7riEs="}
+  [4;36;1mCategoria Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategoria Create (0.0ms)[0m   [0;1mINSERT INTO `categorias` (`updated_at`, `titulo`, `contenido`, `created_at`) VALUES('2011-06-29 16:37:03', 'Secundario', 'Categoria secundaria ', '2011-06-29 16:37:03')[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/categorias/2
+Completed in 79ms (DB: 63) | 302 Found [http://localhost/categorias]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2011-06-29 12:37:03) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 2) [0m
+Rendering template within layouts/aplicacion
+Rendering categorias/show
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://localhost/categorias/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2011-06-29 12:37:05) [GET]
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering categorias/index
+  [4;35;1mCategoria Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://localhost/categorias]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2011-06-29 12:37:16) [GET]
+  [4;36;1mProducto Load (0.0ms)[0m   [0;1mSELECT * FROM `productos` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/index
+  [4;35;1mProducto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/productos]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#edit (for 127.0.0.1 at 2011-06-29 12:37:19) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProducto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+  [4;35;1mProducto Load (0.0ms)[0m   [0mSELECT * FROM `productos` WHERE (`productos`.`id` = 2) [0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/edit
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+Rendered productos/_form (32.0ms)
+Completed in 63ms (View: 32, DB: 0) | 200 OK [http://localhost/productos/2/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#update (for 127.0.0.1 at 2011-06-29 12:37:23) [PUT]
+  Parameters: {"producto"=>{"categoria_id"=>"2", "contenido"=>"otras cosas de la vida para que ver si no ver", "titulo"=>"otra cosa"}, "commit"=>"Save changes", "authenticity_token"=>"nuDjHf+t8cqtSRuDtyCRQcFAK6qQH1j/AH2mgK7riEs=", "id"=>"2"}
+  [4;36;1mProducto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+  [4;35;1mProducto Load (0.0ms)[0m   [0mSELECT * FROM `productos` WHERE (`productos`.`id` = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProducto Update (0.0ms)[0m   [0mUPDATE `productos` SET `categoria_id` = 2, `updated_at` = '2011-06-29 16:37:23' WHERE `id` = 2[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/productos/2
+Completed in 63ms (DB: 32) | 302 Found [http://localhost/productos/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#show (for 127.0.0.1 at 2011-06-29 12:37:23) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProducto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+  [4;36;1mProducto Load (0.0ms)[0m   [0;1mSELECT * FROM `productos` WHERE (`productos`.`id` = 2) [0m
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/show
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/productos/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2011-06-29 12:37:30) [GET]
+  [4;36;1mProducto Load (0.0ms)[0m   [0;1mSELECT * FROM `productos` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/index
+  [4;35;1mProducto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+Completed in 47ms (View: 16, DB: 15) | 200 OK [http://localhost/productos]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PaginasController#index (for 127.0.0.1 at 2011-06-29 15:41:22) [GET]
+  [4;36;1mPagina Load (0.0ms)[0m   [0;1mSELECT * FROM `paginas` [0m
+Rendering template within layouts/aplicacion
+Rendering paginas/index
+Completed in 156ms (View: 140, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (15.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#index (for 127.0.0.1 at 2011-06-29 15:41:33) [GET]
+  [4;35;1mProducto Load (0.0ms)[0m   [0mSELECT * FROM `productos` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/index
+  [4;36;1mProducto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `productos`[0m
+Completed in 125ms (View: 62, DB: 31) | 200 OK [http://localhost/productos]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2011-06-29 15:41:35) [GET]
+  [4;35;1mProducto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+  [4;36;1mCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+Rendered productos/_form (32.0ms)
+Completed in 250ms (View: 172, DB: 16) | 200 OK [http://localhost/productos/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2011-06-29 15:41:39) [GET]
+  [4;35;1mProducto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+  [4;36;1mCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+Rendered productos/_form (16.0ms)
+Completed in 93ms (View: 47, DB: 16) | 200 OK [http://localhost/productos/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2011-06-29 15:41:45) [GET]
+  [4;35;1mProducto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+  [4;36;1mCategoria Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+Rendered productos/_form (16.0ms)
+Completed in 78ms (View: 16, DB: 32) | 200 OK [http://localhost/productos/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductosController#new (for 127.0.0.1 at 2011-06-29 15:42:36) [GET]
+  [4;35;1mProducto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering productos/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+  [4;36;1mCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+Rendered productos/_form (32.0ms)
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/productos/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2011-06-29 16:02:30) [GET]
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering categorias/index
+  [4;36;1mCategoria Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+Completed in 93ms (View: 63, DB: 15) | 200 OK [http://localhost/categorias]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2011-06-29 16:02:35) [GET]
+  Parameters: {"id"=>"list"}
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Categoria with ID=list):
+  app/controllers/categorias_controller.rb:12:in `show'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (204.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2011-06-29 16:03:33) [GET]
+  Parameters: {"id"=>"list"}
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Categoria with ID=list):
+  app/controllers/categorias_controller.rb:12:in `show'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2011-06-29 16:05:03) [GET]
+  Parameters: {"id"=>"list"}
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Categoria with ID=list):
+  app/controllers/categorias_controller.rb:12:in `show'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (469.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (15.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2011-06-29 16:06:03) [GET]
+  [4;35;1mCategoria Load (16.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering categorias/index
+  [4;36;1mCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+Completed in 63ms (View: 31, DB: 31) | 200 OK [http://localhost/categorias]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2011-06-29 16:06:34) [GET]
+  Parameters: {"id"=>"index"}
+  [4;35;1mCategoria Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Categoria with ID=index):
+  app/controllers/categorias_controller.rb:12:in `show'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2011-06-29 16:06:43) [GET]
+  Parameters: {"id"=>"index"}
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (16.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Categoria with ID=index):
+  app/controllers/categorias_controller.rb:12:in `show'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (562.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2011-06-29 16:06:50) [GET]
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering categorias/index
+  [4;36;1mCategoria Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+Completed in 62ms (View: 15, DB: 16) | 200 OK [http://localhost/categorias/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#new (for 127.0.0.1 at 2011-06-29 16:07:32) [GET]
+  [4;35;1mCategoria Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+Rendering template within layouts/aplicacion
+Rendering categorias/new
+Rendered categorias/_form (0.0ms)
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/categorias/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2011-06-29 16:07:44) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mCategoria Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Categoria with ID=show):
+  app/controllers/categorias_controller.rb:12:in `show'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2011-06-29 16:07:49) [GET]
+  Parameters: {"id"=>"list"}
+  [4;36;1mCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Categoria with ID=list):
+  app/controllers/categorias_controller.rb:12:in `show'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2011-06-29 16:07:53) [GET]
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering categorias/index
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/categorias/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PaginasController#index (for 127.0.0.1 at 2011-06-29 16:08:34) [GET]
+  [4;36;1mPagina Load (0.0ms)[0m   [0;1mSELECT * FROM `paginas` [0m
+Rendering template within layouts/aplicacion
+Rendering paginas/index
+Completed in 219ms (View: 203, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2011-06-29 16:10:32) [GET]
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering categorias/index
+  [4;36;1mCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/categorias]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2011-06-29 16:10:38) [GET]
+  Parameters: {"id"=>"list"}
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Categoria with ID=list):
+  app/controllers/categorias_controller.rb:12:in `show'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (203.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2011-06-29 16:10:50) [GET]
+  Parameters: {"id"=>"list"}
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering categorias/index
+  [4;36;1mCategoria Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+Completed in 47ms (View: 15, DB: 16) | 200 OK [http://localhost/categorias/index/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2011-06-29 16:11:16) [GET]
+  Parameters: {"id"=>"list"}
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (31.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Categoria with ID=list):
+  app/controllers/categorias_controller.rb:12:in `show'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#show (for 127.0.0.1 at 2011-06-29 16:11:17) [GET]
+  Parameters: {"id"=>"list"}
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (15.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Categoria with ID=list):
+  app/controllers/categorias_controller.rb:12:in `show'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (359.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2011-06-29 16:12:15) [GET]
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering categorias/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #5 of app/views/categorias/index.html.erb:
+2: 
+3: <h1> Lista de categorias </h1>
+4: <ul id="cat_list">
+5:   <% @categoria.each do |c| %>
+6:   <li><%= link_to c.titulo, :action => 'show', :id => c.id %>
+7:   <%= "(#{c.productos.count})" -%>
+8:   </li>
+
+    app/views/categorias/index.html.erb:5
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2011-06-29 16:12:24) [GET]
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+Rendering template within layouts/aplicacion
+Rendering categorias/index
+  [4;35;1mCategoria Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+
+ActionView::TemplateError (undefined method `productos' for #<Categoria:0x4769978>) on line #7 of app/views/categorias/index.html.erb:
+4: <ul id="cat_list">
+5:   <% @categorias.each do |c| %>
+6:   <li><%= link_to c.titulo, :action => 'show', :id => c.id %>
+7:   <%= "(#{c.productos.count})" -%>
+8:   </li>
+9:   <% end %>
+10: </ul>
+
+    app/views/categorias/index.html.erb:7
+    app/views/categorias/index.html.erb:5:in `each'
+    app/views/categorias/index.html.erb:5
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (110.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2011-06-29 16:13:23) [GET]
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+  [4;35;1mProducto Load (0.0ms)[0m   [0mSELECT * FROM `productos` [0m
+Rendering template within layouts/aplicacion
+Rendering categorias/index
+  [4;36;1mCategoria Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categorias`[0m
+
+ActionView::TemplateError (undefined method `productos' for #<Categoria:0x47cff5c>) on line #7 of app/views/categorias/index.html.erb:
+4: <ul id="cat_list">
+5:   <% @categorias.each do |c| %>
+6:   <li><%= link_to c.titulo, :action => 'show', :id => c.id %>
+7:   <%= "(#{c.productos.count})" -%>
+8:   </li>
+9:   <% end %>
+10: </ul>
+
+    app/views/categorias/index.html.erb:7
+    app/views/categorias/index.html.erb:5:in `each'
+    app/views/categorias/index.html.erb:5
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCategoria Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` [0m
+  [4;35;1mSQL (78.0ms)[0m   [0mSELECT count(*) AS count_all FROM `categorias` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mProducto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `productos`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mProducto Load (0.0ms)[0m   [0mSELECT * FROM `productos` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `productos` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `categorias` [0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSELECT count(*) AS count_all FROM `productos` [0m
+  [4;36;1mCategoria Load (0.0ms)[0m   [0;1mSELECT * FROM `categorias` WHERE (`categorias`.`id` = 1) [0m
+  [4;35;1mProducto Load (0.0ms)[0m   [0mSELECT * FROM `productos` WHERE (`productos`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriasController#index (for 127.0.0.1 at 2011-06-29 16:37:59) [GET]
+  [4;35;1mCategoria Load (0.0ms)[0m   [0mSELECT * FROM `categorias` [0m
+  [4;36;1mProducto Load (0.0ms)[0m   [0;1mSELECT * FROM `productos` [0m
+Rendering template within layouts/aplicacion
+Rendering categorias/index
+  [4;35;1mCategoria Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `categorias`[0m
+
+ActionView::TemplateError (undefined method `productos' for #<Categoria:0x480a350>) on line #7 of app/views/categorias/index.html.erb:
+4: <ul id="cat_list">
+5:   <% @categorias.each do |c| %>
+6:   <li><%= link_to c.titulo, :action => 'show', :id => c.id %>
+7:   <%= "(#{c.productos.count})" -%>
+8:   </li>
+9:   <% end %>
+10: </ul>
+
+    app/views/categorias/index.html.erb:7
+    app/views/categorias/index.html.erb:5:in `each'
+    app/views/categorias/index.html.erb:5
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (516.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)

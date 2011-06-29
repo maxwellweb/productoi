@@ -1,0 +1,16 @@
+<% title "Pagina" %>
+
+<p>
+  <strong>Titulo:</strong>
+  <%=h @pagina.titulo %>
+</p>
+<p>
+  <strong>Contenido:</strong>
+  <%=h @pagina.contenido %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_pagina_path(@pagina) %> |
+  <%= link_to "Destroy", @pagina, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", paginas_path %>
+</p>

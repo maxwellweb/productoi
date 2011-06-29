@@ -1,0 +1,9 @@
+one:
+  categoria_id: 1
+  titulo: MyString
+  contenido: MyText
+
+two:
+  categoria_id: 1
+  titulo: MyString
+  contenido: MyText
